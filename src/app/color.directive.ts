@@ -4,9 +4,9 @@ import { Directive, ElementRef, OnInit } from "@angular/core";
   selector: "[appColor]"
 })
 export class ColorDirective implements OnInit {
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef<HTMLLIElement>) {}
 
   ngOnInit() {
-    this.el.nativeElement.style.backgroundColor = "red";
+    this.el.nativeElement.style.color = "red";
   }
 }
